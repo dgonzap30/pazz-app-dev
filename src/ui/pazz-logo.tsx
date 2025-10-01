@@ -79,7 +79,7 @@ export const PazzLogo: React.FC<PazzLogoProps> = ({
 };
 
 // Also export a simple text version for places where we just need the text
-const PazzLogoText: React.FC<{ className?: string; color?: string }> = ({ 
+const _PazzLogoText: React.FC<{ className?: string; color?: string }> = ({ 
   className,
   color = 'currentColor'
 }) => (

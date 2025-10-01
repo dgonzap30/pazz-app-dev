@@ -39,7 +39,7 @@ export function LoginForm() {
     try {
       await signIn(data.email, data.password);
       navigate("/dashboard");
-    } catch (error) {
+    } catch {
       // Error toast is handled by useAuth
     } finally {
       setIsLoading(false);

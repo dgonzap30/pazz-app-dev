@@ -13,7 +13,7 @@ interface LogEntry {
   level: LogLevel;
   message: string;
   timestamp: Date;
-  context?: Record<string, any> | undefined;
+  context?: Record<string, unknown> | undefined;
   error?: Error | undefined;
   userId?: string | undefined;
   sessionId?: string | undefined;
@@ -112,7 +112,7 @@ class Logger {
     }
   }
 
-  private log(level: LogLevel, message: string, context?: Record<string, any>, error?: Error): void {
+  private log(level: LogLevel, message: string, context?: Record<string, unknown>, error?: Error): void {
     if (!this.shouldLog(level)) {
       return;
     }
@@ -189,24 +189,24 @@ class Logger {
   }
 
   // Public logging methods
-  public debug(message: string, context?: Record<string, any>): void {
+  public debug(message: string, context?: Record<string, unknown>): void {
     this.log(LogLevel.DEBUG, message, context);
   }
 
-  public info(message: string, context?: Record<string, any>): void {
+  public info(message: string, context?: Record<string, unknown>): void {
     this.log(LogLevel.INFO, message, context);
   }
 
-  public warn(message: string, context?: Record<string, any>): void {
+  public warn(message: string, context?: Record<string, unknown>): void {
     this.log(LogLevel.WARN, message, context);
   }
 
-  public error(message: string, error?: Error | unknown, context?: Record<string, any>): void {
+  public error(message: string, error?: Error | unknown, context?: Record<string, unknown>): void {
     const errorObj = error instanceof Error ? error : new Error(String(error));
     this.log(LogLevel.ERROR, message, context, errorObj);
   }
 
-  public fatal(message: string, error?: Error | unknown, context?: Record<string, any>): void {
+  public fatal(message: string, error?: Error | unknown, context?: Record<string, unknown>): void {
     const errorObj = error instanceof Error ? error : new Error(String(error));
     this.log(LogLevel.FATAL, message, context, errorObj);
   }
@@ -279,13 +279,13 @@ export { logger };
 // React hook for using logger with component context
 export function useLogger(componentName: string) {
   return {
-    debug: (message: string, context?: Record<string, any>) => 
+    debug: (message: string, context?: Record<string, unknown>) =>
       logger.debug(message, { component: componentName, ...context }),
-    info: (message: string, context?: Record<string, any>) => 
+    info: (message: string, context?: Record<string, unknown>) =>
       logger.info(message, { component: componentName, ...context }),
-    warn: (message: string, context?: Record<string, any>) => 
+    warn: (message: string, context?: Record<string, unknown>) =>
       logger.warn(message, { component: componentName, ...context }),
-    error: (message: string, error?: Error | unknown, context?: Record<string, any>) => 
+    error: (message: string, error?: Error | unknown, context?: Record<string, unknown>) =>
       logger.error(message, error, { component: componentName, ...context }),
   };
 }

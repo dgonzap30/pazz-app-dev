@@ -69,7 +69,7 @@ export function RegisterForm() {
         phone: data.phone,
       });
       navigate("/auth/login");
-    } catch (error) {
+    } catch {
       // Error toast is handled by useAuth
     } finally{
       setIsLoading(false);

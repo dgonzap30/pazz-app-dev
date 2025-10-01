@@ -29,7 +29,7 @@ export function safeParse<T extends ZodSchema>(
 /**
  * Parse with throwing formatted errors
  */
-function parse<T extends ZodSchema>(
+function _parse<T extends ZodSchema>(
   schema: T,
   data: unknown
 ): z.infer<T> {
@@ -86,7 +86,7 @@ class ValidationException extends Error {
 /**
  * Create a partial version of a schema (all fields optional)
  */
-export function createPartialSchema<T extends z.ZodObject<any>>(
+export function createPartialSchema<T extends z.ZodObject<z.ZodRawShape>>(
   schema: T
 ): z.ZodObject<z.ZodRawShape> {
   const shape: z.ZodRawShape = {};

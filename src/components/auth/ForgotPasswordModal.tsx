@@ -51,7 +51,7 @@ export function ForgotPasswordModal({ open, onOpenChange }: ForgotPasswordModalP
     try {
       await resetPassword(data.email);
       setIsSuccess(true);
-    } catch (error) {
+    } catch {
       // Error toast is handled by useAuth
     } finally {
       setIsLoading(false);

@@ -77,7 +77,7 @@ export function ApplicationForm() {
       await new Promise(resolve => setTimeout(resolve, 1500));
       
       setStatus('success');
-    } catch (error) {
+    } catch {
       setStatus('idle');
       // Error toast is handled by useAuth
     }
