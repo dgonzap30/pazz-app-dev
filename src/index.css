@@ -1,0 +1,17 @@
+/* Import all style modules first */
+@import './styles/design-system.css';
+@import './styles/components.css';
+@import './styles/animations.css';
+@import './styles/responsive.css';
+@import './styles/utilities.css';
+@import './styles/scrollbar.css';
+@import './styles/grid-layout.css';
+@import './styles/admin-accessibility.css';
+@import './styles/bottom-nav.css';
+@import './styles/login.css';
+@import './styles/forgot-password.css';
+
+/* Then Tailwind directives */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;

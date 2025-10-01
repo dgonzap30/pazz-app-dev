@@ -1,0 +1,204 @@
+/* Accessibility-Compliant Design Tokens for ADMIN Dashboard */
+/* WCAG 2.1 AA Compliant - Contrast Ratio ≥ 4.5:1 for text, ≥ 3:1 for UI components */
+
+:root {
+  /* === ADMIN LIGHT THEME === */
+  
+  /* Admin Sidebar */
+  --admin-sidebar-light-bg: #F7F8FA;
+  --admin-sidebar-light-text: #1F1F23;
+  --admin-sidebar-light-hover: #E2E4E8;
+  --admin-sidebar-light-accent-hover: #FF6F61;
+  --admin-sidebar-light-focus-ring: #FF6F61;
+  --admin-sidebar-light-border: #E0E2E6;
+  
+  /* Admin Top Bar */
+  --admin-topbar-light-bg: #FFFFFF;
+  --admin-topbar-light-text-primary: #1F1F23;
+  --admin-topbar-light-text-secondary: #6E6E73;
+  --admin-topbar-light-border: #E0E2E6;
+  
+  /* Admin Dashboard Cards */
+  --admin-card-light-bg: #FFFFFF;
+  --admin-card-light-border: #E0E2E6;
+  --admin-card-light-text-primary: #1F1F23;
+  --admin-card-light-text-secondary: #6E6E73;
+  --admin-card-light-icon: #4A4A50;
+  --admin-card-light-hover-bg: #F7F8FA;
+  --admin-card-light-hover-shadow: rgba(0, 0, 0, 0.1);
+  --admin-card-light-focus-ring: #FF6F61;
+  
+  /* Admin Quick Access Section */
+  --admin-quick-access-light-bg: #F9FAFB;
+  --admin-quick-access-light-border: #E0E4E8;
+  --admin-quick-access-light-text-primary: #1F1F23;
+  --admin-quick-access-light-text-secondary: #6E6E73;
+  --admin-quick-access-light-icon-accent: #FF6F61;
+  
+  /* === ADMIN DARK THEME === */
+  
+  /* Admin Sidebar */
+  --admin-sidebar-dark-bg: #121528;
+  --admin-sidebar-dark-text: #E8E8EB;
+  --admin-sidebar-dark-hover: #1D1F33;
+  --admin-sidebar-dark-accent-hover: #FF9F1C;
+  --admin-sidebar-dark-focus-ring: #FFB84C;
+  --admin-sidebar-dark-border: #2A2C38;
+  
+  /* Admin Top Bar */
+  --admin-topbar-dark-bg: #1F2133;
+  --admin-topbar-dark-text-primary: #FFFFFF;
+  --admin-topbar-dark-text-secondary: #A3A5AD;
+  --admin-topbar-dark-border: #2A2C38;
+  
+  /* Admin Dashboard Cards */
+  --admin-card-dark-bg: #1E1F29;
+  --admin-card-dark-border: #2A2C38;
+  --admin-card-dark-text-primary: #FFFFFF;
+  --admin-card-dark-text-secondary: #C5C7CD;
+  --admin-card-dark-icon: #D0D2D8;
+  --admin-card-dark-hover-bg: #272932;
+  --admin-card-dark-hover-shadow: rgba(0, 0, 0, 0.5);
+  --admin-card-dark-focus-ring: #FFB84C;
+  
+  /* Admin Quick Access Section */
+  --admin-quick-access-dark-bg: #1F2133;
+  --admin-quick-access-dark-border: #2A2C38;
+  --admin-quick-access-dark-text-primary: #FFFFFF;
+  --admin-quick-access-dark-text-secondary: #C1C3CA;
+  --admin-quick-access-dark-icon-accent: #FF9F1C;
+  
+  /* === ADMIN TYPOGRAPHY === */
+  --admin-font-size-title: 1.5rem;
+  --admin-font-size-subtitle: 0.875rem;
+  --admin-font-size-card-title: 1.25rem;
+  --admin-font-size-card-subtitle: 0.875rem;
+  --admin-font-weight-semibold: 600;
+  --admin-font-weight-medium: 500;
+  --admin-font-weight-normal: 400;
+  
+  /* === ADMIN SPACING === */
+  --admin-spacing-card-padding: 1.5rem;
+  --admin-spacing-section-gap: 2rem;
+  --admin-spacing-item-gap: 1rem;
+  --admin-border-radius-card: 1rem;
+  --admin-border-radius-button: 0.5rem;
+  
+  /* === ADMIN ACCESSIBILITY === */
+  --admin-min-touch-target: 44px;
+  --admin-focus-ring-width: 2px;
+  --admin-focus-ring-offset: 2px;
+  
+  /* === ADMIN ANIMATIONS === */
+  --admin-transition-standard: 0.2s ease-in-out;
+  --admin-transition-slow: 0.3s ease-in-out;
+}
+
+/* Admin Light theme application */
+.admin-theme-light {
+  /* Sidebar */
+  --admin-sidebar-bg: var(--admin-sidebar-light-bg);
+  --admin-sidebar-text: var(--admin-sidebar-light-text);
+  --admin-sidebar-hover: var(--admin-sidebar-light-hover);
+  --admin-sidebar-accent-hover: var(--admin-sidebar-light-accent-hover);
+  --admin-sidebar-focus-ring: var(--admin-sidebar-light-focus-ring);
+  --admin-sidebar-border: var(--admin-sidebar-light-border);
+  
+  /* Top Bar */
+  --admin-topbar-bg: var(--admin-topbar-light-bg);
+  --admin-topbar-text-primary: var(--admin-topbar-light-text-primary);
+  --admin-topbar-text-secondary: var(--admin-topbar-light-text-secondary);
+  --admin-topbar-border: var(--admin-topbar-light-border);
+  
+  /* Cards */
+  --admin-card-bg: var(--admin-card-light-bg);
+  --admin-card-border: var(--admin-card-light-border);
+  --admin-card-text-primary: var(--admin-card-light-text-primary);
+  --admin-card-text-secondary: var(--admin-card-light-text-secondary);
+  --admin-card-icon: var(--admin-card-light-icon);
+  --admin-card-hover-bg: var(--admin-card-light-hover-bg);
+  --admin-card-hover-shadow: var(--admin-card-light-hover-shadow);
+  --admin-card-focus-ring: var(--admin-card-light-focus-ring);
+  
+  /* Quick Access */
+  --admin-quick-access-bg: var(--admin-quick-access-light-bg);
+  --admin-quick-access-border: var(--admin-quick-access-light-border);
+  --admin-quick-access-text-primary: var(--admin-quick-access-light-text-primary);
+  --admin-quick-access-text-secondary: var(--admin-quick-access-light-text-secondary);
+  --admin-quick-access-icon-accent: var(--admin-quick-access-light-icon-accent);
+}
+
+/* Admin Dark theme application */
+.admin-theme-dark {
+  /* Sidebar */
+  --admin-sidebar-bg: var(--admin-sidebar-dark-bg);
+  --admin-sidebar-text: var(--admin-sidebar-dark-text);
+  --admin-sidebar-hover: var(--admin-sidebar-dark-hover);
+  --admin-sidebar-accent-hover: var(--admin-sidebar-dark-accent-hover);
+  --admin-sidebar-focus-ring: var(--admin-sidebar-dark-focus-ring);
+  --admin-sidebar-border: var(--admin-sidebar-dark-border);
+  
+  /* Top Bar */
+  --admin-topbar-bg: var(--admin-topbar-dark-bg);
+  --admin-topbar-text-primary: var(--admin-topbar-dark-text-primary);
+  --admin-topbar-text-secondary: var(--admin-topbar-dark-text-secondary);
+  --admin-topbar-border: var(--admin-topbar-dark-border);
+  
+  /* Cards */
+  --admin-card-bg: var(--admin-card-dark-bg);
+  --admin-card-border: var(--admin-card-dark-border);
+  --admin-card-text-primary: var(--admin-card-dark-text-primary);
+  --admin-card-text-secondary: var(--admin-card-dark-text-secondary);
+  --admin-card-icon: var(--admin-card-dark-icon);
+  --admin-card-hover-bg: var(--admin-card-dark-hover-bg);
+  --admin-card-hover-shadow: var(--admin-card-dark-hover-shadow);
+  --admin-card-focus-ring: var(--admin-card-dark-focus-ring);
+  
+  /* Quick Access */
+  --admin-quick-access-bg: var(--admin-quick-access-dark-bg);
+  --admin-quick-access-border: var(--admin-quick-access-dark-border);
+  --admin-quick-access-text-primary: var(--admin-quick-access-dark-text-primary);
+  --admin-quick-access-text-secondary: var(--admin-quick-access-dark-text-secondary);
+  --admin-quick-access-icon-accent: var(--admin-quick-access-dark-icon-accent);
+}
+
+/* === ADMIN ACCESSIBILITY UTILITIES === */
+
+/* Admin Focus states */
+.admin-focus-ring {
+  outline: var(--admin-focus-ring-width) solid var(--admin-card-focus-ring);
+  outline-offset: var(--admin-focus-ring-offset);
+}
+
+.admin-focus-ring-sidebar {
+  outline: var(--admin-focus-ring-width) solid var(--admin-sidebar-focus-ring);
+  outline-offset: var(--admin-focus-ring-offset);
+}
+
+/* Admin High contrast mode support */
+@media (prefers-contrast: high) {
+  .admin-theme-light {
+    --admin-card-border: #000000;
+    --admin-sidebar-border: #000000;
+  }
+  
+  .admin-theme-dark {
+    --admin-card-border: #FFFFFF;
+    --admin-sidebar-border: #FFFFFF;
+  }
+}
+
+/* Admin Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  .admin-dashboard * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Admin Minimum touch target size */
+.admin-touch-target {
+  min-width: var(--admin-min-touch-target);
+  min-height: var(--admin-min-touch-target);
+}

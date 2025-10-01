@@ -1,0 +1,25 @@
+/* Base Component Library - Modern Client Management Dashboard */
+
+@import './design-system.css';
+
+/* Legacy component styles - TO BE REMOVED after migration to Tailwind */
+/* These styles conflict with Tailwind utilities and should not be used */
+/* Use Tailwind classes instead: */
+/* .card -> use Tailwind's card components from @/ui */
+/* .button -> use Tailwind button classes or @/ui Button component */
+/* .input -> use Tailwind form classes or @/ui Input component */
+
+/* Keeping only animation keyframes that are not easily replaceable with Tailwind */
+@keyframes shimmer {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+
+@keyframes skeleton-loading {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+@keyframes spinner-rotate {
+  to { transform: rotate(360deg); }
+}

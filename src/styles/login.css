@@ -1,0 +1,164 @@
+/* Login Page Specific Styles - Clean & Minimal */
+
+/* Login Container */
+.login-container {
+  min-height: 100vh;
+  min-height: 100dvh; /* Dynamic viewport height for mobile */
+  display: flex;
+  flex-direction: column;
+}
+
+/* Form improvements for mobile */
+@media (max-width: 640px) {
+  /* Ensure proper spacing on small screens */
+  .login-form-card {
+    margin-inline: 1rem;
+    width: calc(100% - 2rem);
+  }
+
+  /* Larger touch targets on mobile */
+  .login-form input[type="email"],
+  .login-form input[type="password"],
+  .login-form input[type="text"] {
+    min-height: 48px; /* Minimum touch target size */
+    font-size: 16px; /* Prevent zoom on iOS */
+  }
+
+  .login-form button {
+    min-height: 48px;
+  }
+
+  /* Better spacing for mobile */
+  .login-form > * + * {
+    margin-top: 1.25rem;
+  }
+}
+
+/* Focus states with better visibility */
+.login-form input:focus {
+  outline: none;
+  border-color: transparent;
+  box-shadow: 0 0 0 2px var(--color-primary);
+}
+
+/* Button hover states */
+.login-form button[type="submit"] {
+  transition: all 150ms ease;
+}
+
+.login-form button[type="submit"]:hover:not(:disabled) {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(255, 122, 0, 0.2);
+}
+
+.login-form button[type="submit"]:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+/* Checkbox styling */
+.login-form input[type="checkbox"] {
+  cursor: pointer;
+  transition: all 150ms ease;
+}
+
+.login-form input[type="checkbox"]:checked {
+  background-color: var(--color-primary);
+  border-color: var(--color-primary);
+}
+
+/* Links and text buttons */
+.login-form a,
+.login-form button[type="button"] {
+  transition: color 150ms ease;
+  -webkit-tap-highlight-color: transparent; /* Remove tap highlight on mobile */
+}
+
+/* Password visibility toggle */
+.password-toggle {
+  -webkit-tap-highlight-color: transparent;
+  padding: 0.25rem;
+  border-radius: 0.25rem;
+  transition: background-color 150ms ease;
+}
+
+.password-toggle:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+/* Error states */
+.login-form input.error {
+  border-color: var(--color-danger);
+  background-color: rgba(239, 68, 68, 0.02);
+}
+
+.login-form input.error:focus {
+  box-shadow: 0 0 0 2px var(--color-danger);
+}
+
+/* Loading states */
+.login-form button[disabled] {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+/* Smooth transitions for all interactive elements */
+.login-form input,
+.login-form button,
+.login-form a {
+  transition-property: border-color, background-color, color, transform, box-shadow;
+  transition-duration: 150ms;
+  transition-timing-function: ease;
+}
+
+/* Remove autofill yellow background */
+.login-form input:-webkit-autofill,
+.login-form input:-webkit-autofill:hover,
+.login-form input:-webkit-autofill:focus {
+  -webkit-text-fill-color: var(--color-text-primary);
+  -webkit-box-shadow: 0 0 0px 1000px white inset;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+/* Responsive typography */
+@media (max-width: 640px) {
+  .login-title {
+    font-size: 1.5rem;
+  }
+
+  .login-subtitle {
+    font-size: 0.875rem;
+  }
+}
+
+/* Improved footer links */
+.login-footer a {
+  padding: 0.25rem 0.5rem;
+  margin: -0.25rem -0.5rem;
+  border-radius: 0.25rem;
+}
+
+.login-footer a:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+/* Accessibility improvements */
+.login-form *:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+/* Reduce motion for users who prefer it */
+@media (prefers-reduced-motion: reduce) {
+  .login-form * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Dark mode support (optional) */
+@media (prefers-color-scheme: dark) {
+  .login-form input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0px 1000px var(--color-gray-900) inset;
+  }
+}

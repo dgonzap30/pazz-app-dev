@@ -1,0 +1,14 @@
+[
+  {
+    "name": "Web App Bundle",
+    "path": "dist/apps/web/assets/index-*.js",
+    "limit": "300 KB",
+    "brotli": true
+  },
+  {
+    "name": "CSS Bundle", 
+    "path": "dist/apps/web/assets/index-*.css",
+    "limit": "50 KB",
+    "brotli": true
+  }
+]

@@ -1,0 +1,33 @@
+# Development and CI files
+.github
+.vscode
+scripts
+coverage
+.cache
+docs
+archive
+
+# Environment files
+.env*
+!.env.example
+
+# Documentation
+*.md
+!README.md
+
+# Logs and temporary files
+*.log
+*.tmp
+.DS_Store
+
+# Test files
+**/*.test.*
+**/*.spec.*
+**/__tests__/**
+**/test-setup.ts
+vitest.config.*
+
+# Development configs
+.eslintrc*
+.prettierrc*
+jest.config.*
