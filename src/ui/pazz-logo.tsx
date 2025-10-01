@@ -77,13 +77,3 @@ export const PazzLogo: React.FC<PazzLogoProps> = ({
     </svg>
   );
 };
-
-// Also export a simple text version for places where we just need the text
-const _PazzLogoText: React.FC<{ className?: string; color?: string }> = ({ 
-  className,
-  color = 'currentColor'
-}) => (
-  <span className={cn("font-bold", className)} style={{ color }}>
-    PAZZ Partner+
-  </span>
-);

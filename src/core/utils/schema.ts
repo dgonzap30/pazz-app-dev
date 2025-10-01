@@ -25,24 +25,6 @@ export function safeParse<T extends ZodSchema>(
     errors: formatZodErrors(result.error)
   };
 }
-
-/**
- * Parse with throwing formatted errors
- */
-function _parse<T extends ZodSchema>(
-  schema: T,
-  data: unknown
-): z.infer<T> {
-  try {
-    return schema.parse(data);
-  } catch (error) {
-    if (error instanceof ZodError) {
-      throw new ValidationException(formatZodErrors(error));
-    }
-    throw error;
-  }
-}
-
 /**
  * Validation error structure
  */
@@ -63,24 +45,6 @@ function formatZodErrors(error: ZodError): ValidationError[] {
     type: issue.code,
     value: 'input' in issue ? issue.input : undefined
   }));
-}
-
-/**
- * Custom validation exception
- */
-class ValidationException extends Error {
-  constructor(public readonly errors: ValidationError[]) {
-    super('Validation failed');
-    this.name = 'ValidationException';
-  }
-
-  toJSON() {
-    return {
-      name: this.name,
-      message: this.message,
-      errors: this.errors
-    };
-  }
 }
 
 /**

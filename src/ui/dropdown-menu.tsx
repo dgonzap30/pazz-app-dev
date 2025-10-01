@@ -6,10 +6,6 @@ import type { ElementRef, ComponentPropsWithoutRef } from 'react';
 
 const DropdownMenu = DropdownMenuPrimitive.Root;
 const DropdownMenuTrigger = DropdownMenuPrimitive.Trigger;
-const _DropdownMenuGroup = DropdownMenuPrimitive.Group;
-const _DropdownMenuPortal = DropdownMenuPrimitive.Portal;
-const _DropdownMenuSub = DropdownMenuPrimitive.Sub;
-const _DropdownMenuRadioGroup = DropdownMenuPrimitive.RadioGroup;
 
 const DropdownMenuSubTrigger = React.forwardRef<
   ElementRef<typeof DropdownMenuPrimitive.SubTrigger>,

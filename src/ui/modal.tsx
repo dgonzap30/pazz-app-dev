@@ -4,9 +4,7 @@ import { X } from "lucide-react";
 import { cn } from "./utils";
 
 const Modal = DialogPrimitive.Root;
-const _ModalTrigger = DialogPrimitive.Trigger;
 const ModalPortal = DialogPrimitive.Portal;
-const _ModalClose = DialogPrimitive.Close;
 
 const ModalOverlay = React.forwardRef<
   React.ElementRef<typeof DialogPrimitive.Overlay>,
